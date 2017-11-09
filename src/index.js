@@ -15,7 +15,7 @@ const content = `
   </style>
   <body>
     ${ReactDOMServer.renderToString(
-      <button style={{ backgroundColor: 'red' }}>DARK</button>
+      <button style={{ backgroundColor: 'red', color: 'green' }}>DARK</button>
     )}
   </body>
 `
@@ -42,6 +42,15 @@ const doIt = async () => {
   await chrome.goto(url)
 
   const element = await chrome.$('button')
+
+  const textColor = await chrome.evaluate((element) => {
+    return window.getComputedStyle(element).getPropertyValue('color')
+  }, element)
+
+  await chrome.evaluate((element) => {
+    element.style.color = 'transparent'
+  }, element)
+
   const screenshot = await element.screenshot()
 
   const png = new PNG({ filterType: 4 })
@@ -52,7 +61,8 @@ const doIt = async () => {
   console.log(
     getAverageColor(
       parsedData.data
-    )
+    ),
+    textColor
   )
 
   await chrome.close()
