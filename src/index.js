@@ -4,7 +4,8 @@ import temp from 'temp'
 import fs from 'fs'
 import puppeteer from 'puppeteer'
 import { PNG } from 'pngjs'
-import { promisify } from 'util'
+import makethen from 'makethen'
+import contrast from 'get-contrast'
 
 // Automatically track and cleanup files at exit
 temp.track()
@@ -15,7 +16,7 @@ const content = `
   </style>
   <body>
     ${ReactDOMServer.renderToString(
-      <button style={{ backgroundColor: 'red', color: 'green' }}>DARK</button>
+      <button style={{ backgroundColor: 'white', color: 'black' }}>DARK</button>
     )}
   </body>
 `
@@ -31,6 +32,8 @@ const getAverageColor = (data) => data
   }, [0, 0, 0, 0])
   .map((channel) => channel / (data.length / 4))
   .map(Math.floor)
+
+const toRGBA = (data) => `rgba(${data[0]},${data[1]},${data[2]},${data[3]/255})`
 
 const doIt = async () => {
   console.log(htmlFilename, content)
@@ -54,16 +57,21 @@ const doIt = async () => {
   const screenshot = await element.screenshot()
 
   const png = new PNG({ filterType: 4 })
-  const parse = promisify(png.parse.bind(png))
+  const parse = makethen(png.parse.bind(png))
 
   const parsedData = await parse(screenshot)
+  const backgroundAverageColor = toRGBA(getAverageColor(
+    parsedData.data
+  ))
 
   console.log(
-    getAverageColor(
-      parsedData.data
-    ),
-    textColor
+    backgroundAverageColor,
+    textColor,
+    contrast.ratio(backgroundAverageColor, textColor),
+    contrast.score(backgroundAverageColor, textColor),
+    contrast.isAccessible(backgroundAverageColor, textColor)
   )
+
 
   await chrome.close()
 

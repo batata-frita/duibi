@@ -876,6 +876,20 @@ cryptiles@2.x.x:
   dependencies:
     boom "2.x.x"
 
+css-color-list@0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/css-color-list/-/css-color-list-0.0.1.tgz#8718e8695ae7a2cc8787be8715f1c008a7f28b15"
+  dependencies:
+    css-color-names "0.0.1"
+
+css-color-names@0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/css-color-names/-/css-color-names-0.0.1.tgz#5d0548fa256456ede4a9a0c2ac7ab19d3eb1ad81"
+
+css-color-names@0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/css-color-names/-/css-color-names-0.0.3.tgz#de0cef16f4d8aa8222a320d5b6d7e9bbada7b9f6"
+
 css-in-js-utils@^2.0.0:
   version "2.0.0"
   resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/css-in-js-utils/-/css-in-js-utils-2.0.0.tgz#5af1dd70f4b06b331f48d22a3d86e0786c0b9435"
@@ -1116,6 +1130,16 @@ gauge@~2.7.3:
     strip-ansi "^3.0.1"
     wide-align "^1.1.0"
 
+get-contrast@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/get-contrast/-/get-contrast-2.0.0.tgz#c965497d258d4c23d03a06595485acc3d51ed6fb"
+  dependencies:
+    css-color-names "0.0.3"
+    is-blank "1.1.0"
+    is-named-css-color "1.0.0"
+    rgb "^0.1.0"
+    wcag-contrast "0.1.0"
+
 getpass@^0.1.1:
   version "0.1.7"
   resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/getpass/-/getpass-0.1.7.tgz#5eff8e3e684d569ae4cb2b1282604e8ba62149fa"
@@ -1183,6 +1207,10 @@ hawk@3.1.3, hawk@~3.1.3:
     cryptiles "2.x.x"
     hoek "2.x.x"
     sntp "1.x.x"
+
+hex-rgb@~1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/hex-rgb/-/hex-rgb-1.0.0.tgz#532275697cb9823e052429b184c6781d46cfdf49"
 
 hoek@2.x.x:
   version "2.16.3"
@@ -1267,6 +1295,13 @@ is-binary-path@^1.0.0:
   dependencies:
     binary-extensions "^1.0.0"
 
+is-blank@1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/is-blank/-/is-blank-1.1.0.tgz#9274ddbd46363cb767075c385d4ab88c6a64dc17"
+  dependencies:
+    is-empty "0.0.1"
+    is-whitespace "^0.3.0"
+
 is-buffer@^1.1.5:
   version "1.1.6"
   resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/is-buffer/-/is-buffer-1.1.6.tgz#efaa2ea9daa0d7ab2ea13a97b2b8ad51fefbe8be"
@@ -1274,6 +1309,10 @@ is-buffer@^1.1.5:
 is-dotfile@^1.0.0:
   version "1.0.3"
   resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/is-dotfile/-/is-dotfile-1.0.3.tgz#a6a2f32ffd2dfb04f5ca25ecd0f6b83cf798a1e1"
+
+is-empty@0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/is-empty/-/is-empty-0.0.1.tgz#09fdc3d649dda5969156c0853a9b76bd781c5a33"
 
 is-equal-shallow@^0.1.3:
   version "0.1.3"
@@ -1307,6 +1346,12 @@ is-glob@^2.0.0, is-glob@^2.0.1:
   dependencies:
     is-extglob "^1.0.0"
 
+is-named-css-color@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/is-named-css-color/-/is-named-css-color-1.0.0.tgz#3b5f89bdc4a515ff4ed25714ffc64129a25599b7"
+  dependencies:
+    css-color-list "0.0.1"
+
 is-number@^2.1.0:
   version "2.1.0"
   resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/is-number/-/is-number-2.1.0.tgz#01fcbbb393463a548f2f466cce16dece49db908f"
@@ -1338,6 +1383,10 @@ is-stream@^1.0.1:
 is-typedarray@~1.0.0:
   version "1.0.0"
   resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/is-typedarray/-/is-typedarray-1.0.0.tgz#e479c80858df0c1b11ddda6940f96011fcda4a9a"
+
+is-whitespace@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/is-whitespace/-/is-whitespace-0.3.0.tgz#1639ecb1be036aec69a54cbb401cfbed7114ab7f"
 
 isarray@1.0.0, isarray@~1.0.0:
   version "1.0.0"
@@ -1436,6 +1485,10 @@ loose-envify@^1.0.0, loose-envify@^1.1.0, loose-envify@^1.3.1:
   resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/loose-envify/-/loose-envify-1.3.1.tgz#d1a8ad33fa9ce0e713d65fdd0ac8b748d478c848"
   dependencies:
     js-tokens "^3.0.0"
+
+makethen@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/makethen/-/makethen-0.1.0.tgz#dd69b9e7296deaf6566135f1496c82b3236c5d08"
 
 micromatch@^2.1.5:
   version "2.3.11"
@@ -1880,6 +1933,10 @@ regjsparser@^0.1.4:
   dependencies:
     jsesc "~0.5.0"
 
+relative-luminance@0.0.0:
+  version "0.0.0"
+  resolved "https://registry.yarnpkg.com/relative-luminance/-/relative-luminance-0.0.0.tgz#5c56f75687ea722023fe4d96ea44683ccdf1fbfe"
+
 remove-trailing-separator@^1.0.1:
   version "1.1.0"
   resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/remove-trailing-separator/-/remove-trailing-separator-1.1.0.tgz#c24bce2a283adad5bc3f58e0d48249b92379d8ef"
@@ -1924,6 +1981,10 @@ request@2.81.0:
     tough-cookie "~2.3.0"
     tunnel-agent "^0.6.0"
     uuid "^3.0.0"
+
+rgb@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/rgb/-/rgb-0.1.0.tgz#be27b291e8feffeac1bd99729721bfa40fc037b5"
 
 rimraf@2, rimraf@^2.5.1, rimraf@^2.6.1:
   version "2.6.2"
@@ -2130,6 +2191,13 @@ verror@1.10.0:
     assert-plus "^1.0.0"
     core-util-is "1.0.2"
     extsprintf "^1.2.0"
+
+wcag-contrast@0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/wcag-contrast/-/wcag-contrast-0.1.0.tgz#6ae37954e404941718eda1a1d8e270d9b5671934"
+  dependencies:
+    hex-rgb "~1.0.0"
+    relative-luminance "0.0.0"
 
 whatwg-fetch@>=0.10.0:
   version "2.0.3"
