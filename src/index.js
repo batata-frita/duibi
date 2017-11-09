@@ -47,7 +47,7 @@ export default async test => {
   const parsedData = await parse(backgroundScreenshot)
   const backgroundAverageColor = toRGBA(getAverageColor(parsedData.data))
 
-  await chrome.close()
+  await browser.close()
 
   return {
     backgroundAverageColor,
