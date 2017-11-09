@@ -5,15 +5,33 @@
 
 Library and tool to check colour contrast accessibility of elements in a web pages.
 
-# Usage
+## CLI usage
 
-Install:
+Install globally as a tool:
+
+```
+npm install -g duibi
+```
+
+And use it!
+
+```bash
+Usage
+  $ duibi <url> <container selector> <text selector>
+
+Examples
+  $ duibi 'https://klarna.com/' '.container' 'span'
+```
+
+## Library usage
+
+Install it locally in your project:
 
 ```
 npm install --save duibi
 ```
 
-And use it as a library:
+And call it directly:
 
 ```js
 import duibi from '..'
