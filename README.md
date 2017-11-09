@@ -1,4 +1,4 @@
-# duibi
+# Duibi
 
 [![Build Status](https://travis-ci.org/batata-frita/duibi.svg)](https://travis-ci.org/batata-frita/duibi)
 [![npm version](https://badge.fury.io/js/duibi.svg)](https://badge.fury.io/js/duibi)
@@ -20,7 +20,7 @@ Usage
   $ duibi <url> <container selector> <text selector>
 
 Examples
-  $ duibi 'https://klarna.com/' '.container' 'span'
+  $ duibi 'https://www.klarna.com/se/' '.block-hero__title'
 ```
 
 ## Library usage
