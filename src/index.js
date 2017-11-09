@@ -15,13 +15,22 @@ const content = `
   </style>
   <body>
     ${ReactDOMServer.renderToString(
-      <button style={{ backgroundColor: 'red' }}>Regular</button>
+      <button style={{ backgroundColor: 'red' }}>DARK</button>
     )}
   </body>
 `
 const htmlFilename = temp.path({ suffix: '.html' })
 const imageFilename = temp.path({ suffix: '.png' })
 const url = `file://${htmlFilename}`
+
+const getAverageColor = (data) => data
+  .reduce((result, current, index) => {
+    result[index % 4] = result[index % 4] + current
+
+    return result
+  }, [0, 0, 0, 0])
+  .map((channel) => channel / (data.length / 4))
+  .map(Math.floor)
 
 const doIt = async () => {
   console.log(htmlFilename, content)
@@ -40,7 +49,11 @@ const doIt = async () => {
 
   const parsedData = await parse(screenshot)
 
-  console.log(parsedData.data)
+  console.log(
+    getAverageColor(
+      parsedData.data
+    )
+  )
 
   await chrome.close()
 
