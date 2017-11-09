@@ -19,11 +19,11 @@ duibi({
 })
 .then((result) => {
 	console.log(chalk.magenta('Background'))
-	termImg(result.backgroundScreenshotPath, () => {})
+	termImg(result.backgroundScreenshotPath, { fallback: () => {} })
 	console.log(chalk.cyan('• screenshot:'), result.backgroundScreenshotPath)
 	console.log(chalk.cyan('• average color:'), result.backgroundAverageColor)
 	console.log(chalk.magenta('\nText'))
-	termImg(result.containerScreenshotPath, () => {})
+	termImg(result.containerScreenshotPath, { fallback: () => {} })
 	console.log(chalk.cyan('• screenshot:'), result.containerScreenshotPath)
 	console.log(chalk.cyan('• color:'), result.foregroundColor)
 	console.log(chalk.magenta('\nReport'))
