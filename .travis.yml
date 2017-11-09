@@ -8,6 +8,13 @@ sudo: false
 
 node_js: 6
 
+env:
+  global:
+    - PATH=$HOME/.yarn/bin:$PATH
+
+before_install:
+  - curl -o- -L https://yarnpkg.com/install.sh | bash
+
 cache:
   directories:
     - node_modules
