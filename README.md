@@ -1,5 +1,8 @@
 # duibi
 
+[![Build Status](https://travis-ci.org/batata-frita/duibi.svg)](https://travis-ci.org/batata-frita/duibi)
+[![npm version](https://badge.fury.io/js/duibi.svg)](https://badge.fury.io/js/duibi)
+
 Library and tool to check colour contrast accessibility of elements in a web pages.
 
 # Usage
