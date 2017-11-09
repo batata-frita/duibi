@@ -1,7 +1,7 @@
 {
   "name": "duibi",
   "version": "0.0.1",
-  "description": "",
+  "description": "Check colour contrast accessibility of elements in a web pages",
   "main": "index.js",
   "scripts": {
     "build": "rm -rf lib && babel src --out-dir lib",
@@ -10,7 +10,7 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "files": [
     "bin",
     "lib"
