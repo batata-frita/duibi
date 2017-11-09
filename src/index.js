@@ -10,47 +10,26 @@ import contrast from 'get-contrast'
 // Automatically track and cleanup files at exit
 temp.track()
 
-const content = `
-  <style>
-    body { margin: 0 }
-  </style>
-  <body>
-    ${ReactDOMServer.renderToString(
-      <button style={{ backgroundColor: 'white', color: 'black' }}>DARK</button>
-    )}
-  </body>
-`
-const htmlFilename = temp.path({ suffix: '.html' })
-const imageFilename = temp.path({ suffix: '.png' })
-const url = `file://${htmlFilename}`
+export default async test => {
+  const { containerSelector, html } = test
 
-const getAverageColor = (data) => data
-  .reduce((result, current, index) => {
-    result[index % 4] = result[index % 4] + current
+  const htmlFilename = temp.path({ suffix: '.html' })
+  const imageFilename = temp.path({ suffix: '.png' })
+  const url = `file://${htmlFilename}`
 
-    return result
-  }, [0, 0, 0, 0])
-  .map((channel) => channel / (data.length / 4))
-  .map(Math.floor)
-
-const toRGBA = (data) => `rgba(${data[0]},${data[1]},${data[2]},${data[3]/255})`
-
-const doIt = async () => {
-  console.log(htmlFilename, content)
-
-  fs.writeFileSync(htmlFilename, content)
+  fs.writeFileSync(htmlFilename, html)
 
   const browser = await puppeteer.launch()
   const chrome = await browser.newPage()
   await chrome.goto(url)
 
-  const element = await chrome.$('button')
+  const element = await chrome.$(containerSelector)
 
-  const textColor = await chrome.evaluate((element) => {
+  const foregroundColor = await chrome.evaluate(element => {
     return window.getComputedStyle(element).getPropertyValue('color')
   }, element)
 
-  await chrome.evaluate((element) => {
+  await chrome.evaluate(element => {
     element.style.color = 'transparent'
   }, element)
 
@@ -60,23 +39,30 @@ const doIt = async () => {
   const parse = makethen(png.parse.bind(png))
 
   const parsedData = await parse(screenshot)
-  const backgroundAverageColor = toRGBA(getAverageColor(
-    parsedData.data
-  ))
-
-  console.log(
-    backgroundAverageColor,
-    textColor,
-    contrast.ratio(backgroundAverageColor, textColor),
-    contrast.score(backgroundAverageColor, textColor),
-    contrast.isAccessible(backgroundAverageColor, textColor)
-  )
-
+  const backgroundAverageColor = toRGBA(getAverageColor(parsedData.data))
 
   await chrome.close()
 
-  console.log('image', imageFilename)
-  fs.writeFileSync(imageFilename, screenshot)
+  return {
+    backgroundAverageColor,
+    foregroundColor,
+    ratio: contrast.ratio(backgroundAverageColor, foregroundColor),
+    score: contrast.score(backgroundAverageColor, foregroundColor),
+    isAccessible: contrast.isAccessible(backgroundAverageColor, foregroundColor),
+  }
 }
 
-doIt().then(() => console.log('done'), error => console.log('ERROR', error))
+const getAverageColor = data =>
+  data
+    .reduce(
+      (result, current, index) => {
+        result[index % 4] = result[index % 4] + current
+
+        return result
+      },
+      [0, 0, 0, 0]
+    )
+    .map(channel => channel / (data.length / 4))
+    .map(Math.floor)
+
+const toRGBA = data => `rgba(${data[0]},${data[1]},${data[2]},${data[3] / 255})`
