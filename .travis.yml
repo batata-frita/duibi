@@ -5,8 +5,22 @@ script:
   - npm test
 
 sudo: false
-node_js: 6.11.1
+
+node_js: 6
 
 cache:
   directories:
     - node_modules
+
+before_deploy:
+  - npm prune
+  - npm run build
+
+deploy:
+  provider: npm
+  email: paulo@ragonha.me
+  api_key:
+    secure: HKyGdV+FDWE785ODnbha3YKVNRYDdrq2Y9AvKFgCv+wGOzc9CKHoAbcOSZ1AiZJMPafgSCBgXYjss5Zjo6xNZWoVJZowkxDkGK2yuxPDtzV2KIJCSt3Cf7y7GjZNbPuqvqMlA5M5FAAXDgJJURrvv8SCmNS1izr0/ifYFdFYhnlfW3a4Rpc6JHA5B9peJ3chtWkqbNh5F6rdZ7J6r4un0qGoJ86ofnkuMDdrvrtL04f81K1Lj97I5Texj9DtVsg+h8iaHhoeQ0o+U7k9c8ociTl9YWC7naLWDWAqfrghOXbTxO4ELYDtc2sel/hGoiTOtiJgDT6s64ybRHHzA+b7sFUhGJFJtptq41DJA/+R2ND/yRvZwwY6RMmpNbX/vF4+Ou1Mp3lI3qeKxqPIGR3RVAHc5KuK/1rjBvK2psXoJGRyfR5AdSH1hmZCti27G0txfaLZiJFnJ6Ht2UhYkomxVClxyWVqIAsftRCRpNgjEFiL3sQ010xHqkPUQi2/998isyUgE4L+drUlpHXZvRa2orIXCZlLD/gPFOj+1s3GkfzrW4z8I+1VlSXojkLHceeojoL8OTgNJjgz81K0vwo6RMFVNLY9U2LuMqL5UrLs4EErNd/SbLZqjCs5tUaQvAksL3I4lYsSoNEuhKZssbMaf7LlePnMHFZEzF0SJzgsRXE=
+  on:
+    tags: true
+    repo: batata-frita/duibi
