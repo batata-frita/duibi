@@ -1,6 +1,6 @@
 {
   "name": "duibi",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "Check colour contrast accessibility of elements in a web pages",
   "main": "index.js",
   "bin": "lib/cli.js",
