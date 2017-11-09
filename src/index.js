@@ -11,19 +11,22 @@ import contrast from 'get-contrast'
 temp.track()
 
 export default async test => {
-  const { containerSelector, html } = test
+  const { containerSelector, html, url } = test
 
   const htmlFilename = temp.path({ suffix: '.html' })
-  const imageFilename = temp.path({ suffix: '.png' })
-  const url = `file://${htmlFilename}`
+  const containerScreenshotPath = temp.path({ suffix: '.png' })
+  const backgroundScreenshotPath = temp.path({ suffix: '.png' })
 
-  fs.writeFileSync(htmlFilename, html)
+  if (html) {
+    fs.writeFileSync(htmlFilename, html)
+  }
 
   const browser = await puppeteer.launch()
   const chrome = await browser.newPage()
-  await chrome.goto(url)
+  await chrome.goto(url || `file://${htmlFilename}`)
 
   const element = await chrome.$(containerSelector)
+  const containerScreenshot = await element.screenshot()
 
   const foregroundColor = await chrome.evaluate(element => {
     return window.getComputedStyle(element).getPropertyValue('color')
@@ -33,12 +36,15 @@ export default async test => {
     element.style.color = 'transparent'
   }, element)
 
-  const screenshot = await element.screenshot()
+  const backgroundScreenshot = await element.screenshot()
+
+  fs.writeFileSync(backgroundScreenshotPath, backgroundScreenshot)
+  fs.writeFileSync(containerScreenshotPath, containerScreenshot)
 
   const png = new PNG({ filterType: 4 })
   const parse = makethen(png.parse.bind(png))
 
-  const parsedData = await parse(screenshot)
+  const parsedData = await parse(backgroundScreenshot)
   const backgroundAverageColor = toRGBA(getAverageColor(parsedData.data))
 
   await chrome.close()
@@ -49,6 +55,8 @@ export default async test => {
     ratio: contrast.ratio(backgroundAverageColor, foregroundColor),
     score: contrast.score(backgroundAverageColor, foregroundColor),
     isAccessible: contrast.isAccessible(backgroundAverageColor, foregroundColor),
+    backgroundScreenshotPath: backgroundScreenshotPath,
+    containerScreenshotPath: containerScreenshotPath
   }
 }
 
