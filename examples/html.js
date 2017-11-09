@@ -10,4 +10,4 @@ duibi({
     </body>
   `,
   containerSelector: 'button',
-}).then(result => console.log('done', result), error => console.log('ERROR', error))
+}).then(result => console.log('done', result))
