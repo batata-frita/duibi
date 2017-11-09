@@ -7,11 +7,27 @@ import { PNG } from 'pngjs'
 import makethen from 'makethen'
 import contrast from 'get-contrast'
 
+// Refer to https://github.com/GoogleChrome/puppeteer/pull/1323/files
+const screenshot = async (element, options = {}) => {
+   await element._scrollIntoViewIfNeeded();
+   const { layoutViewport: { pageX, pageY } } = await element._client.send('Page.getLayoutMetrics');
+
+   const boundingBox = await element.boundingBox();
+   if (!boundingBox)
+     throw new Error('Node is not visible');
+   const clip = Object.assign({}, boundingBox);
+   clip.x += pageX;
+   clip.y += pageY;
+   return await element._page.screenshot(Object.assign({}, {
+     clip
+   }, options));
+ }
+
 // Automatically track and cleanup files at exit
 temp.track()
 
 export default async test => {
-  const { containerSelector, html, url } = test
+  const { containerSelector, html, url, textSelector } = test
 
   const htmlFilename = temp.path({ suffix: '.html' })
   const containerScreenshotPath = temp.path({ suffix: '.png' })
@@ -23,20 +39,26 @@ export default async test => {
 
   const browser = await puppeteer.launch()
   const chrome = await browser.newPage()
+
   await chrome.goto(url || `file://${htmlFilename}`)
 
   const element = await chrome.$(containerSelector)
-  const containerScreenshot = await element.screenshot()
+  const containerScreenshot = await screenshot(element)
 
   const foregroundColor = await chrome.evaluate(element => {
     return window.getComputedStyle(element).getPropertyValue('color')
   }, element)
 
-  await chrome.evaluate(element => {
+  await chrome.evaluate((element, containerSelector, textSelector) => {
     element.style.color = 'transparent'
-  }, element)
+    if (textSelector) {
+      document.querySelectorAll(containerSelector + ' ' + textSelector).forEach(textElement => {
+        textElement.style.color = 'transparent'
+      })
+    }
+  }, element, containerSelector, textSelector)
 
-  const backgroundScreenshot = await element.screenshot()
+  const backgroundScreenshot = await screenshot(element)
 
   fs.writeFileSync(backgroundScreenshotPath, backgroundScreenshot)
   fs.writeFileSync(containerScreenshotPath, containerScreenshot)
