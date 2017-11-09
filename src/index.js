@@ -1,5 +1,3 @@
-import React from 'react'
-import ReactDOMServer from 'react-dom/server'
 import temp from 'temp'
 import fs from 'fs'
 import puppeteer from 'puppeteer'
@@ -9,19 +7,24 @@ import contrast from 'get-contrast'
 
 // Refer to https://github.com/GoogleChrome/puppeteer/pull/1323/files
 const screenshot = async (element, options = {}) => {
-   await element._scrollIntoViewIfNeeded();
-   const { layoutViewport: { pageX, pageY } } = await element._client.send('Page.getLayoutMetrics');
+  await element._scrollIntoViewIfNeeded()
+  const { layoutViewport: { pageX, pageY } } = await element._client.send('Page.getLayoutMetrics')
 
-   const boundingBox = await element.boundingBox();
-   if (!boundingBox)
-     throw new Error('Node is not visible');
-   const clip = Object.assign({}, boundingBox);
-   clip.x += pageX;
-   clip.y += pageY;
-   return await element._page.screenshot(Object.assign({}, {
-     clip
-   }, options));
- }
+  const boundingBox = await element.boundingBox()
+  if (!boundingBox) throw new Error('Node is not visible')
+  const clip = Object.assign({}, boundingBox)
+  clip.x += pageX
+  clip.y += pageY
+  return await element._page.screenshot(
+    Object.assign(
+      {},
+      {
+        clip,
+      },
+      options
+    )
+  )
+}
 
 // Automatically track and cleanup files at exit
 temp.track()
@@ -49,14 +52,19 @@ export default async test => {
     return window.getComputedStyle(element).getPropertyValue('color')
   }, element)
 
-  await chrome.evaluate((element, containerSelector, textSelector) => {
-    element.style.color = 'transparent'
-    if (textSelector) {
-      document.querySelectorAll(containerSelector + ' ' + textSelector).forEach(textElement => {
-        textElement.style.color = 'transparent'
-      })
-    }
-  }, element, containerSelector, textSelector)
+  await chrome.evaluate(
+    (element, containerSelector, textSelector) => {
+      element.style.color = 'transparent'
+      if (textSelector) {
+        document.querySelectorAll(containerSelector + ' ' + textSelector).forEach(textElement => {
+          textElement.style.color = 'transparent'
+        })
+      }
+    },
+    element,
+    containerSelector,
+    textSelector
+  )
 
   const backgroundScreenshot = await screenshot(element)
 
@@ -78,7 +86,7 @@ export default async test => {
     score: contrast.score(backgroundAverageColor, foregroundColor),
     isAccessible: contrast.isAccessible(backgroundAverageColor, foregroundColor),
     backgroundScreenshotPath: backgroundScreenshotPath,
-    containerScreenshotPath: containerScreenshotPath
+    containerScreenshotPath: containerScreenshotPath,
   }
 }
 

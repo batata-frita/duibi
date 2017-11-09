@@ -2,53 +2,6 @@
 # yarn lockfile v1
 
 
-"@hocs/omit-props@^0.2.1":
-  version "0.2.1"
-  resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/@hocs/omit-props/-/omit-props-0.2.1.tgz#39ea93a598c14284091441fb3931d67e0b53c6a6"
-  dependencies:
-    just-omit "^1.0.1"
-
-"@hocs/with-lifecycle@^0.2.0":
-  version "0.2.0"
-  resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/@hocs/with-lifecycle/-/with-lifecycle-0.2.0.tgz#2f1c36cb322b283247d1fea0086cd81c72fec3ab"
-
-"@klarna/bubble-ui@^1.1.0":
-  version "1.1.0"
-  resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/@klarna/bubble-ui/-/@klarna/bubble-ui-1.1.0.tgz#e17f1d84f426f66a6c486c372ccc7ff7148ae041"
-  dependencies:
-    "@hocs/omit-props" "^0.2.1"
-    "@hocs/with-lifecycle" "^0.2.0"
-    "@klarna/higher-order-components" "^3.1.0"
-    collect-fps "^2.0.0"
-    deepmerge "^1.4.4"
-    elegir "^0.1.2"
-    mobile-detect "^1.3.6"
-    react-component-queries "^2.2.0"
-    react-context-props "^2.2.0"
-    react-device-simulator "^0.1.6"
-    react-maskedinput "^4.0.0"
-    react-primitives "^0.4.2"
-    react-sizeme "^2.3.4"
-
-"@klarna/higher-order-components@^3.1.0":
-  version "3.1.0"
-  resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/@klarna/higher-order-components/-/higher-order-components-3.1.0.tgz#1e1b3b7c1fd859024882bc4de2ceca4e5654a454"
-  dependencies:
-    collect-fps "2.0.0"
-    deepmerge "^1.4.4"
-    jwt-decode "^2.2.0"
-    recompose "^0.23.4"
-    seed-random "^2.2.0"
-
-"@klarna/higher-order-components@^5.0.0":
-  version "5.0.0"
-  resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/@klarna/higher-order-components/-/higher-order-components-5.0.0.tgz#3d7875b3726c205a4252681a998cc28050e7367c"
-  dependencies:
-    collect-fps "2.0.0"
-    deepmerge "^1.4.4"
-    jwt-decode "^2.2.0"
-    seed-random "^2.2.0"
-
 abbrev@1:
   version "1.1.1"
   resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/abbrev/-/abbrev-1.1.1.tgz#f8f2c887ad10bf67f634f005b6987fed3179aac8"
@@ -65,20 +18,6 @@ ajv@^4.9.1:
   dependencies:
     co "^4.6.0"
     json-stable-stringify "^1.0.1"
-
-animated@^0.1.5:
-  version "0.1.5"
-  resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/animated/-/animated-0.1.5.tgz#83df8dc443d57abab7b0bb04818b0b655b31c9b9"
-  dependencies:
-    invariant "^2.2.0"
-    normalize-css-color "^1.0.1"
-
-animated@^0.2.0:
-  version "0.2.1"
-  resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/animated/-/animated-0.2.1.tgz#c3e19c60207597493e0b93f9f009b1b7bc603c41"
-  dependencies:
-    invariant "^2.2.0"
-    normalize-css-color "^1.0.1"
 
 ansi-regex@^2.0.0:
   version "2.1.1"
@@ -116,15 +55,11 @@ arr-flatten@^1.0.1:
   version "1.1.0"
   resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/arr-flatten/-/arr-flatten-1.1.0.tgz#36048bbff4e7b47e136644316c99669ea5ae91f1"
 
-array-find-index@^1.0.2:
-  version "1.0.2"
-  resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/array-find-index/-/array-find-index-1.0.2.tgz#df010aa1287e164bbda6f9723b0a96a1ec4187a1"
-
 array-unique@^0.2.1:
   version "0.2.1"
   resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/array-unique/-/array-unique-0.2.1.tgz#a1d97ccafcbc2625cc70fadceb36a50c58b01a53"
 
-asap@^2.0.5, asap@~2.0.3:
+asap@~2.0.3:
   version "2.0.6"
   resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/asap/-/asap-2.0.6.tgz#e50347611d7e690943208bbdafebcbc2fb866d46"
 
@@ -233,14 +168,6 @@ babel-helper-builder-binary-assignment-operator-visitor@^6.24.1:
     babel-helper-explode-assignable-expression "^6.24.1"
     babel-runtime "^6.22.0"
     babel-types "^6.24.1"
-
-babel-helper-builder-react-jsx@^6.24.1:
-  version "6.26.0"
-  resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/babel-helper-builder-react-jsx/-/babel-helper-builder-react-jsx-6.26.0.tgz#39ff8313b75c8b65dceff1f31d383e0ff2a408a0"
-  dependencies:
-    babel-runtime "^6.26.0"
-    babel-types "^6.26.0"
-    esutils "^2.0.2"
 
 babel-helper-call-delegate@^6.24.1:
   version "6.24.1"
@@ -354,14 +281,6 @@ babel-plugin-syntax-async-functions@^6.8.0:
 babel-plugin-syntax-exponentiation-operator@^6.8.0:
   version "6.13.0"
   resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/babel-plugin-syntax-exponentiation-operator/-/babel-plugin-syntax-exponentiation-operator-6.13.0.tgz#9ee7e8337290da95288201a6a57f4170317830de"
-
-babel-plugin-syntax-flow@^6.18.0:
-  version "6.18.0"
-  resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/babel-plugin-syntax-flow/-/babel-plugin-syntax-flow-6.18.0.tgz#4c3ab20a2af26aa20cd25995c398c4eb70310c8d"
-
-babel-plugin-syntax-jsx@^6.3.13, babel-plugin-syntax-jsx@^6.8.0:
-  version "6.18.0"
-  resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/babel-plugin-syntax-jsx/-/babel-plugin-syntax-jsx-6.18.0.tgz#0af32a9a6e13ca7a3fd5069e62d7b0f58d0d8946"
 
 babel-plugin-syntax-trailing-function-commas@^6.22.0:
   version "6.22.0"
@@ -551,41 +470,6 @@ babel-plugin-transform-exponentiation-operator@^6.22.0:
     babel-plugin-syntax-exponentiation-operator "^6.8.0"
     babel-runtime "^6.22.0"
 
-babel-plugin-transform-flow-strip-types@^6.22.0:
-  version "6.22.0"
-  resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/babel-plugin-transform-flow-strip-types/-/babel-plugin-transform-flow-strip-types-6.22.0.tgz#84cb672935d43714fdc32bce84568d87441cf7cf"
-  dependencies:
-    babel-plugin-syntax-flow "^6.18.0"
-    babel-runtime "^6.22.0"
-
-babel-plugin-transform-react-display-name@^6.23.0:
-  version "6.25.0"
-  resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/babel-plugin-transform-react-display-name/-/babel-plugin-transform-react-display-name-6.25.0.tgz#67e2bf1f1e9c93ab08db96792e05392bf2cc28d1"
-  dependencies:
-    babel-runtime "^6.22.0"
-
-babel-plugin-transform-react-jsx-self@^6.22.0:
-  version "6.22.0"
-  resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/babel-plugin-transform-react-jsx-self/-/babel-plugin-transform-react-jsx-self-6.22.0.tgz#df6d80a9da2612a121e6ddd7558bcbecf06e636e"
-  dependencies:
-    babel-plugin-syntax-jsx "^6.8.0"
-    babel-runtime "^6.22.0"
-
-babel-plugin-transform-react-jsx-source@^6.22.0:
-  version "6.22.0"
-  resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/babel-plugin-transform-react-jsx-source/-/babel-plugin-transform-react-jsx-source-6.22.0.tgz#66ac12153f5cd2d17b3c19268f4bf0197f44ecd6"
-  dependencies:
-    babel-plugin-syntax-jsx "^6.8.0"
-    babel-runtime "^6.22.0"
-
-babel-plugin-transform-react-jsx@^6.24.1:
-  version "6.24.1"
-  resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/babel-plugin-transform-react-jsx/-/babel-plugin-transform-react-jsx-6.24.1.tgz#840a028e7df460dfc3a2d29f0c0d91f6376e66a3"
-  dependencies:
-    babel-helper-builder-react-jsx "^6.24.1"
-    babel-plugin-syntax-jsx "^6.8.0"
-    babel-runtime "^6.22.0"
-
 babel-plugin-transform-regenerator@^6.22.0:
   version "6.26.0"
   resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/babel-plugin-transform-regenerator/-/babel-plugin-transform-regenerator-6.26.0.tgz#e0703696fbde27f0a3efcacf8b4dca2f7b3a8f2f"
@@ -641,23 +525,6 @@ babel-preset-env@^1.6.1:
     browserslist "^2.1.2"
     invariant "^2.2.2"
     semver "^5.3.0"
-
-babel-preset-flow@^6.23.0:
-  version "6.23.0"
-  resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/babel-preset-flow/-/babel-preset-flow-6.23.0.tgz#e71218887085ae9a24b5be4169affb599816c49d"
-  dependencies:
-    babel-plugin-transform-flow-strip-types "^6.22.0"
-
-babel-preset-react@^6.24.1:
-  version "6.24.1"
-  resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/babel-preset-react/-/babel-preset-react-6.24.1.tgz#ba69dfaea45fc3ec639b6a4ecea6e17702c91380"
-  dependencies:
-    babel-plugin-syntax-jsx "^6.3.13"
-    babel-plugin-transform-react-display-name "^6.23.0"
-    babel-plugin-transform-react-jsx "^6.24.1"
-    babel-plugin-transform-react-jsx-self "^6.22.0"
-    babel-plugin-transform-react-jsx-source "^6.22.0"
-    babel-preset-flow "^6.23.0"
 
 babel-register@^6.26.0:
   version "6.26.0"
@@ -719,10 +586,6 @@ balanced-match@^1.0.0:
   version "1.0.0"
   resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/balanced-match/-/balanced-match-1.0.0.tgz#89b4d199ab2bee49de164ea02b89ce462d71b767"
 
-batch-processor@^1.0.0:
-  version "1.0.0"
-  resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/batch-processor/-/batch-processor-1.0.0.tgz#75c95c32b748e0850d10c2b168f6bdbe9891ace8"
-
 bcrypt-pbkdf@^1.0.0:
   version "1.0.1"
   resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/bcrypt-pbkdf/-/bcrypt-pbkdf-1.0.1.tgz#63bc5dcb61331b92bc05fd528953c33462a06f8d"
@@ -744,10 +607,6 @@ boom@2.x.x:
   resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/boom/-/boom-2.10.1.tgz#39c8918ceff5799f83f9492a848f625add0c766f"
   dependencies:
     hoek "2.x.x"
-
-bowser@^1.0.0, bowser@^1.7.3:
-  version "1.8.1"
-  resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/bowser/-/bowser-1.8.1.tgz#49785777e7302febadb1a5b71d9a646520ed310d"
 
 brace-expansion@^1.1.7:
   version "1.1.8"
@@ -789,10 +648,6 @@ chalk@^1.1.3:
     strip-ansi "^3.0.0"
     supports-color "^2.0.0"
 
-change-emitter@^0.1.2:
-  version "0.1.6"
-  resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/change-emitter/-/change-emitter-0.1.6.tgz#e8b2fe3d7f1ab7d69a32199aff91ea6931409515"
-
 chokidar@^1.6.1:
   version "1.7.0"
   resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/chokidar/-/chokidar-1.7.0.tgz#798e689778151c8076b4b360e5edd28cda2bb468"
@@ -815,10 +670,6 @@ co@^4.6.0:
 code-point-at@^1.0.0:
   version "1.1.0"
   resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/code-point-at/-/code-point-at-1.1.0.tgz#0d070b4d043a5bea33a2f1a40e2edb3d9a4ccf77"
-
-collect-fps@2.0.0, collect-fps@^2.0.0:
-  version "2.0.0"
-  resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/collect-fps/-/collect-fps-2.0.0.tgz#62adee44763dbebe681c4cba8757265d6f26916e"
 
 combined-stream@^1.0.5, combined-stream@~1.0.5:
   version "1.0.5"
@@ -862,14 +713,6 @@ core-util-is@1.0.2, core-util-is@~1.0.0:
   version "1.0.2"
   resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/core-util-is/-/core-util-is-1.0.2.tgz#b5fd54220aa2bc5ab57aab7140c940754503c1a7"
 
-create-react-class@^15.6.0:
-  version "15.6.2"
-  resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/create-react-class/-/create-react-class-15.6.2.tgz#cf1ed15f12aad7f14ef5f2dfe05e6c42f91ef02a"
-  dependencies:
-    fbjs "^0.8.9"
-    loose-envify "^1.3.1"
-    object-assign "^4.1.1"
-
 cryptiles@2.x.x:
   version "2.0.5"
   resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/cryptiles/-/cryptiles-2.0.5.tgz#3bdfecdc608147c1c67202fa291e7dca59eaa3b8"
@@ -878,23 +721,17 @@ cryptiles@2.x.x:
 
 css-color-list@0.0.1:
   version "0.0.1"
-  resolved "https://registry.yarnpkg.com/css-color-list/-/css-color-list-0.0.1.tgz#8718e8695ae7a2cc8787be8715f1c008a7f28b15"
+  resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/css-color-list/-/css-color-list-0.0.1.tgz#8718e8695ae7a2cc8787be8715f1c008a7f28b15"
   dependencies:
     css-color-names "0.0.1"
 
 css-color-names@0.0.1:
   version "0.0.1"
-  resolved "https://registry.yarnpkg.com/css-color-names/-/css-color-names-0.0.1.tgz#5d0548fa256456ede4a9a0c2ac7ab19d3eb1ad81"
+  resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/css-color-names/-/css-color-names-0.0.1.tgz#5d0548fa256456ede4a9a0c2ac7ab19d3eb1ad81"
 
 css-color-names@0.0.3:
   version "0.0.3"
-  resolved "https://registry.yarnpkg.com/css-color-names/-/css-color-names-0.0.3.tgz#de0cef16f4d8aa8222a320d5b6d7e9bbada7b9f6"
-
-css-in-js-utils@^2.0.0:
-  version "2.0.0"
-  resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/css-in-js-utils/-/css-in-js-utils-2.0.0.tgz#5af1dd70f4b06b331f48d22a3d86e0786c0b9435"
-  dependencies:
-    hyphenate-style-name "^1.0.2"
+  resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/css-color-names/-/css-color-names-0.0.3.tgz#de0cef16f4d8aa8222a320d5b6d7e9bbada7b9f6"
 
 dashdash@^1.12.0:
   version "1.14.1"
@@ -902,29 +739,15 @@ dashdash@^1.12.0:
   dependencies:
     assert-plus "^1.0.0"
 
-debounce@1.0.2:
-  version "1.0.2"
-  resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/debounce/-/debounce-1.0.2.tgz#503cc674d8d7f737099664fb75ddbd36b9626dc6"
-
 debug@2.6.9, debug@^2.2.0, debug@^2.4.1, debug@^2.6.8:
   version "2.6.9"
   resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/debug/-/debug-2.6.9.tgz#5d128515df134ff327e90a4c93f4e077a536341f"
   dependencies:
     ms "2.0.0"
 
-deep-assign@^2.0.0:
-  version "2.0.0"
-  resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/deep-assign/-/deep-assign-2.0.0.tgz#ebe06b1f07f08dae597620e3dd1622f371a1c572"
-  dependencies:
-    is-obj "^1.0.0"
-
 deep-extend@~0.4.0:
   version "0.4.2"
   resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/deep-extend/-/deep-extend-0.4.2.tgz#48b699c27e334bf89f10892be432f6e4c7d34a7f"
-
-deepmerge@^1.4.4:
-  version "1.5.2"
-  resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/deepmerge/-/deepmerge-1.5.2.tgz#10499d868844cdad4fee0842df8c7f6f0c95a753"
 
 delayed-stream@~1.0.0:
   version "1.0.0"
@@ -933,10 +756,6 @@ delayed-stream@~1.0.0:
 delegates@^1.0.0:
   version "1.0.0"
   resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/delegates/-/delegates-1.0.0.tgz#84c6e159b81904fdca59a0ef44cd870d31250f9a"
-
-deline@^1.0.4:
-  version "1.0.4"
-  resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/deline/-/deline-1.0.4.tgz#6c05c87836926e1a1c63e47882f3d2eb2c6f14c9"
 
 detect-indent@^4.0.0:
   version "4.0.0"
@@ -957,16 +776,6 @@ ecc-jsbn@~0.1.1:
 electron-to-chromium@^1.3.27:
   version "1.3.27"
   resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/electron-to-chromium/-/electron-to-chromium-1.3.27.tgz#78ecb8a399066187bb374eede35d9c70565a803d"
-
-elegir@^0.1.2:
-  version "0.1.2"
-  resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/elegir/-/elegir-0.1.2.tgz#f2dee74d6b57ff7a4df24ad77a849ef048059c58"
-
-element-resize-detector@^1.1.12:
-  version "1.1.12"
-  resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/element-resize-detector/-/element-resize-detector-1.1.12.tgz#8b3fd6eedda17f9c00b360a0ea2df9927ae80ba2"
-  dependencies:
-    batch-processor "^1.0.0"
 
 encoding@^0.1.11:
   version "0.1.12"
@@ -1027,7 +836,7 @@ extsprintf@1.3.0, extsprintf@^1.2.0:
   version "1.3.0"
   resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/extsprintf/-/extsprintf-1.3.0.tgz#96918440e3041a7a414f8c52e3c574eb3c3e1e05"
 
-fbjs@^0.8.1, fbjs@^0.8.14, fbjs@^0.8.16, fbjs@^0.8.9:
+fbjs@^0.8.16:
   version "0.8.16"
   resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/fbjs/-/fbjs-0.8.16.tgz#5e67432f550dc41b572bf55847b8aca64e5337db"
   dependencies:
@@ -1058,10 +867,6 @@ fill-range@^2.1.0:
     randomatic "^1.1.3"
     repeat-element "^1.1.2"
     repeat-string "^1.5.2"
-
-flexibility@^2.0.1:
-  version "2.0.1"
-  resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/flexibility/-/flexibility-2.0.1.tgz#ad323aafc40f469ce624286518fc4d7cd72b7c77"
 
 for-in@^1.0.1:
   version "1.0.2"
@@ -1132,7 +937,7 @@ gauge@~2.7.3:
 
 get-contrast@^2.0.0:
   version "2.0.0"
-  resolved "https://registry.yarnpkg.com/get-contrast/-/get-contrast-2.0.0.tgz#c965497d258d4c23d03a06595485acc3d51ed6fb"
+  resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/get-contrast/-/get-contrast-2.0.0.tgz#c965497d258d4c23d03a06595485acc3d51ed6fb"
   dependencies:
     css-color-names "0.0.3"
     is-blank "1.1.0"
@@ -1210,15 +1015,11 @@ hawk@3.1.3, hawk@~3.1.3:
 
 hex-rgb@~1.0.0:
   version "1.0.0"
-  resolved "https://registry.yarnpkg.com/hex-rgb/-/hex-rgb-1.0.0.tgz#532275697cb9823e052429b184c6781d46cfdf49"
+  resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/hex-rgb/-/hex-rgb-1.0.0.tgz#532275697cb9823e052429b184c6781d46cfdf49"
 
 hoek@2.x.x:
   version "2.16.3"
   resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/hoek/-/hoek-2.16.3.tgz#20bb7403d3cea398e91dc4710a8ff1b8274a25ed"
-
-hoist-non-react-statics@^1.0.0:
-  version "1.2.0"
-  resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/hoist-non-react-statics/-/hoist-non-react-statics-1.2.0.tgz#aa448cf0986d55cc40773b17174b7dd066cb7cfb"
 
 home-or-tmp@^2.0.0:
   version "2.0.0"
@@ -1242,10 +1043,6 @@ https-proxy-agent@^2.1.0:
     agent-base "^4.1.0"
     debug "^2.4.1"
 
-hyphenate-style-name@^1.0.1, hyphenate-style-name@^1.0.2:
-  version "1.0.2"
-  resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/hyphenate-style-name/-/hyphenate-style-name-1.0.2.tgz#31160a36930adaf1fc04c6074f7eb41465d4ec4b"
-
 iconv-lite@~0.4.13:
   version "0.4.19"
   resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/iconv-lite/-/iconv-lite-0.4.19.tgz#f7468f60135f5e5dad3399c0a81be9a1603a082b"
@@ -1265,25 +1062,7 @@ ini@~1.3.0:
   version "1.3.4"
   resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/ini/-/ini-1.3.4.tgz#0537cb79daf59b59a1a517dff706c86ec039162e"
 
-inline-style-prefixer@^2.0.5:
-  version "2.0.5"
-  resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/inline-style-prefixer/-/inline-style-prefixer-2.0.5.tgz#c153c7e88fd84fef5c602e95a8168b2770671fe7"
-  dependencies:
-    bowser "^1.0.0"
-    hyphenate-style-name "^1.0.1"
-
-inline-style-prefixer@^3.0.8:
-  version "3.0.8"
-  resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/inline-style-prefixer/-/inline-style-prefixer-3.0.8.tgz#8551b8e5b4d573244e66a34b04f7d32076a2b534"
-  dependencies:
-    bowser "^1.7.3"
-    css-in-js-utils "^2.0.0"
-
-inputmask-core@^2.1.1:
-  version "2.2.0"
-  resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/inputmask-core/-/inputmask-core-2.2.0.tgz#79a75f7f3a4d3312ae95fd2b55a2366a7c91dfba"
-
-invariant@^2.2.0, invariant@^2.2.1, invariant@^2.2.2:
+invariant@^2.2.2:
   version "2.2.2"
   resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/invariant/-/invariant-2.2.2.tgz#9e1f56ac0acdb6bf303306f338be3b204ae60360"
   dependencies:
@@ -1297,7 +1076,7 @@ is-binary-path@^1.0.0:
 
 is-blank@1.1.0:
   version "1.1.0"
-  resolved "https://registry.yarnpkg.com/is-blank/-/is-blank-1.1.0.tgz#9274ddbd46363cb767075c385d4ab88c6a64dc17"
+  resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/is-blank/-/is-blank-1.1.0.tgz#9274ddbd46363cb767075c385d4ab88c6a64dc17"
   dependencies:
     is-empty "0.0.1"
     is-whitespace "^0.3.0"
@@ -1312,7 +1091,7 @@ is-dotfile@^1.0.0:
 
 is-empty@0.0.1:
   version "0.0.1"
-  resolved "https://registry.yarnpkg.com/is-empty/-/is-empty-0.0.1.tgz#09fdc3d649dda5969156c0853a9b76bd781c5a33"
+  resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/is-empty/-/is-empty-0.0.1.tgz#09fdc3d649dda5969156c0853a9b76bd781c5a33"
 
 is-equal-shallow@^0.1.3:
   version "0.1.3"
@@ -1348,7 +1127,7 @@ is-glob@^2.0.0, is-glob@^2.0.1:
 
 is-named-css-color@1.0.0:
   version "1.0.0"
-  resolved "https://registry.yarnpkg.com/is-named-css-color/-/is-named-css-color-1.0.0.tgz#3b5f89bdc4a515ff4ed25714ffc64129a25599b7"
+  resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/is-named-css-color/-/is-named-css-color-1.0.0.tgz#3b5f89bdc4a515ff4ed25714ffc64129a25599b7"
   dependencies:
     css-color-list "0.0.1"
 
@@ -1363,10 +1142,6 @@ is-number@^3.0.0:
   resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/is-number/-/is-number-3.0.0.tgz#24fd6201a4782cf50561c810276afc7d12d71195"
   dependencies:
     kind-of "^3.0.2"
-
-is-obj@^1.0.0:
-  version "1.0.1"
-  resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/is-obj/-/is-obj-1.0.1.tgz#3e4729ac1f5fde025cd7d83a896dab9f4f67db0f"
 
 is-posix-bracket@^0.1.0:
   version "0.1.1"
@@ -1386,7 +1161,7 @@ is-typedarray@~1.0.0:
 
 is-whitespace@^0.3.0:
   version "0.3.0"
-  resolved "https://registry.yarnpkg.com/is-whitespace/-/is-whitespace-0.3.0.tgz#1639ecb1be036aec69a54cbb401cfbed7114ab7f"
+  resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/is-whitespace/-/is-whitespace-0.3.0.tgz#1639ecb1be036aec69a54cbb401cfbed7114ab7f"
 
 isarray@1.0.0, isarray@~1.0.0:
   version "1.0.0"
@@ -1456,14 +1231,6 @@ jsprim@^1.2.2:
     json-schema "0.2.3"
     verror "1.10.0"
 
-just-omit@^1.0.1:
-  version "1.0.1"
-  resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/just-omit/-/just-omit-1.0.1.tgz#0109882a2a11323d59034be805ee978b5b8999a4"
-
-jwt-decode@^2.2.0:
-  version "2.2.0"
-  resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/jwt-decode/-/jwt-decode-2.2.0.tgz#7d86bd56679f58ce6a84704a657dd392bba81a79"
-
 kind-of@^3.0.2:
   version "3.2.2"
   resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/kind-of/-/kind-of-3.2.2.tgz#31ea21a734bab9bbb0f32466d893aea51e4a3c64"
@@ -1480,7 +1247,7 @@ lodash@^4.17.4:
   version "4.17.4"
   resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/lodash/-/lodash-4.17.4.tgz#78203a4d1c328ae1d86dca6460e369b57f4055ae"
 
-loose-envify@^1.0.0, loose-envify@^1.1.0, loose-envify@^1.3.1:
+loose-envify@^1.0.0, loose-envify@^1.3.1:
   version "1.3.1"
   resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/loose-envify/-/loose-envify-1.3.1.tgz#d1a8ad33fa9ce0e713d65fdd0ac8b748d478c848"
   dependencies:
@@ -1488,7 +1255,7 @@ loose-envify@^1.0.0, loose-envify@^1.1.0, loose-envify@^1.3.1:
 
 makethen@^0.1.0:
   version "0.1.0"
-  resolved "https://registry.yarnpkg.com/makethen/-/makethen-0.1.0.tgz#dd69b9e7296deaf6566135f1496c82b3236c5d08"
+  resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/makethen/-/makethen-0.1.0.tgz#dd69b9e7296deaf6566135f1496c82b3236c5d08"
 
 micromatch@^2.1.5:
   version "2.3.11"
@@ -1548,10 +1315,6 @@ mkdirp@0.5.0:
   dependencies:
     minimist "0.0.8"
 
-mobile-detect@^1.3.6:
-  version "1.3.7"
-  resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/mobile-detect/-/mobile-detect-1.3.7.tgz#c1aa7e6617ae1bfd27b511f55022ac40eea97370"
-
 ms@2.0.0:
   version "2.0.0"
   resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/ms/-/ms-2.0.0.tgz#5608aeadfc00be6c2901df5f9861788de0d597c8"
@@ -1589,10 +1352,6 @@ nopt@^4.0.1:
   dependencies:
     abbrev "1"
     osenv "^0.1.4"
-
-normalize-css-color@^1.0.1, normalize-css-color@^1.0.2:
-  version "1.0.2"
-  resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/normalize-css-color/-/normalize-css-color-1.0.2.tgz#02991e97cccec6623fe573afbbf0de6a1f3e9f8d"
 
 normalize-path@^2.0.0, normalize-path@^2.0.1:
   version "2.1.1"
@@ -1678,13 +1437,9 @@ performance-now@^0.2.0:
   version "0.2.0"
   resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/performance-now/-/performance-now-0.2.0.tgz#33ef30c5c77d4ea21c5a53869d91b56d8f2555e5"
 
-performance-now@^2.1.0:
-  version "2.1.0"
-  resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/performance-now/-/performance-now-2.1.0.tgz#6309f4e0e5fa913ec1c69307ae364b4b377c9e7b"
-
 pngjs@^3.3.0:
   version "3.3.0"
-  resolved "https://registry.yarnpkg.com/pngjs/-/pngjs-3.3.0.tgz#1f5730c189c94933b81beda2ab2f8e2855263a8f"
+  resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/pngjs/-/pngjs-3.3.0.tgz#1f5730c189c94933b81beda2ab2f8e2855263a8f"
 
 preserve@^0.2.0:
   version "0.2.0"
@@ -1708,7 +1463,7 @@ promise@^7.1.1:
   dependencies:
     asap "~2.0.3"
 
-prop-types@^15.5.10, prop-types@^15.5.7, prop-types@^15.5.8, prop-types@^15.6.0:
+prop-types@^15.6.0:
   version "15.6.0"
   resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/prop-types/-/prop-types-15.6.0.tgz#ceaf083022fc46b4a35f69e13ef75aed0d639856"
   dependencies:
@@ -1741,16 +1496,6 @@ qs@~6.4.0:
   version "6.4.0"
   resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/qs/-/qs-6.4.0.tgz#13e26d28ad6b0ffaa91312cd3bf708ed351e7233"
 
-raf@^3.1.0:
-  version "3.4.0"
-  resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/raf/-/raf-3.4.0.tgz#a28876881b4bc2ca9117d4138163ddb80f781575"
-  dependencies:
-    performance-now "^2.1.0"
-
-ramda@^0.25.0:
-  version "0.25.0"
-  resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/ramda/-/ramda-0.25.0.tgz#8fdf68231cffa90bc2f9460390a0cb74a29b29a9"
-
 randomatic@^1.1.3:
   version "1.1.7"
   resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/randomatic/-/randomatic-1.1.7.tgz#c7abe9cc8b87c0baa876b19fde83fd464797e38c"
@@ -1766,98 +1511,6 @@ rc@^1.1.7:
     ini "~1.3.0"
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
-
-react-component-queries@^2.2.0:
-  version "2.2.0"
-  resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/react-component-queries/-/react-component-queries-2.2.0.tgz#31958a759798a7a635d8f2e15fda7a430338bb01"
-  dependencies:
-    invariant "^2.2.2"
-
-react-context-props@^2.2.0:
-  version "2.2.0"
-  resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/react-context-props/-/react-context-props-2.2.0.tgz#1f0bd558b337482c7e437a13699acf7938bca18c"
-
-react-device-simulator@^0.1.6:
-  version "0.1.6"
-  resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/react-device-simulator/-/react-device-simulator-0.1.6.tgz#32a054ac4199de52cbd70b1a110a76f0108dae41"
-
-react-dom@^16.0.0:
-  version "16.0.0"
-  resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/react-dom/-/react-dom-16.0.0.tgz#9cc3079c3dcd70d4c6e01b84aab2a7e34c303f58"
-  dependencies:
-    fbjs "^0.8.16"
-    loose-envify "^1.1.0"
-    object-assign "^4.1.1"
-    prop-types "^15.6.0"
-
-react-maskedinput@^4.0.0:
-  version "4.0.0"
-  resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/react-maskedinput/-/react-maskedinput-4.0.0.tgz#e5130576ebe2c914133982dacb59bf200eba4e0c"
-  dependencies:
-    inputmask-core "^2.1.1"
-    prop-types "^15.5.7"
-
-react-motion@^0.5.2:
-  version "0.5.2"
-  resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/react-motion/-/react-motion-0.5.2.tgz#0dd3a69e411316567927917c6626551ba0607316"
-  dependencies:
-    performance-now "^0.2.0"
-    prop-types "^15.5.8"
-    raf "^3.1.0"
-
-react-native-web@0.0.x:
-  version "0.0.130"
-  resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/react-native-web/-/react-native-web-0.0.130.tgz#fea4843999f29cb8d8c3680fcfc71e389db28951"
-  dependencies:
-    animated "^0.2.0"
-    array-find-index "^1.0.2"
-    babel-runtime "^6.26.0"
-    create-react-class "^15.6.0"
-    debounce "1.0.2"
-    deep-assign "^2.0.0"
-    fbjs "^0.8.14"
-    hyphenate-style-name "^1.0.2"
-    inline-style-prefixer "^3.0.8"
-    normalize-css-color "^1.0.2"
-    prop-types "^15.5.10"
-    react-timer-mixin "^0.13.3"
-
-react-primitives@^0.4.2:
-  version "0.4.3"
-  resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/react-primitives/-/react-primitives-0.4.3.tgz#4970afda5a32dccf5ea180380e3a0e16192e4b83"
-  dependencies:
-    animated "^0.1.5"
-    asap "^2.0.5"
-    deline "^1.0.4"
-    flexibility "^2.0.1"
-    inline-style-prefixer "^2.0.5"
-    invariant "^2.2.1"
-    normalize-css-color "^1.0.1"
-    prop-types "^15.5.10"
-    react-native-web "0.0.x"
-    react-timer-mixin "^0.13.3"
-    string-hash "^1.1.3"
-
-react-sizeme@^2.3.4:
-  version "2.3.6"
-  resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/react-sizeme/-/react-sizeme-2.3.6.tgz#d60ea2634acc3fd827a3c7738d41eea0992fa678"
-  dependencies:
-    element-resize-detector "^1.1.12"
-    invariant "^2.2.2"
-    lodash "^4.17.4"
-
-react-timer-mixin@^0.13.3:
-  version "0.13.3"
-  resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/react-timer-mixin/-/react-timer-mixin-0.13.3.tgz#0da8b9f807ec07dc3e854d082c737c65605b3d22"
-
-react@^16.0.0:
-  version "16.0.0"
-  resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/react/-/react-16.0.0.tgz#ce7df8f1941b036f02b2cca9dbd0cb1f0e855e2d"
-  dependencies:
-    fbjs "^0.8.16"
-    loose-envify "^1.1.0"
-    object-assign "^4.1.1"
-    prop-types "^15.6.0"
 
 readable-stream@^2.0.2, readable-stream@^2.0.6, readable-stream@^2.1.4, readable-stream@^2.2.2:
   version "2.3.3"
@@ -1879,15 +1532,6 @@ readdirp@^2.0.0:
     minimatch "^3.0.2"
     readable-stream "^2.0.2"
     set-immediate-shim "^1.0.1"
-
-recompose@^0.23.4:
-  version "0.23.5"
-  resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/recompose/-/recompose-0.23.5.tgz#72ac8261246bec378235d187467d02a721e8b1de"
-  dependencies:
-    change-emitter "^0.1.2"
-    fbjs "^0.8.1"
-    hoist-non-react-statics "^1.0.0"
-    symbol-observable "^1.0.4"
 
 regenerate@^1.2.1:
   version "1.3.3"
@@ -1935,7 +1579,7 @@ regjsparser@^0.1.4:
 
 relative-luminance@0.0.0:
   version "0.0.0"
-  resolved "https://registry.yarnpkg.com/relative-luminance/-/relative-luminance-0.0.0.tgz#5c56f75687ea722023fe4d96ea44683ccdf1fbfe"
+  resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/relative-luminance/-/relative-luminance-0.0.0.tgz#5c56f75687ea722023fe4d96ea44683ccdf1fbfe"
 
 remove-trailing-separator@^1.0.1:
   version "1.1.0"
@@ -1984,7 +1628,7 @@ request@2.81.0:
 
 rgb@^0.1.0:
   version "0.1.0"
-  resolved "https://registry.yarnpkg.com/rgb/-/rgb-0.1.0.tgz#be27b291e8feffeac1bd99729721bfa40fc037b5"
+  resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/rgb/-/rgb-0.1.0.tgz#be27b291e8feffeac1bd99729721bfa40fc037b5"
 
 rimraf@2, rimraf@^2.5.1, rimraf@^2.6.1:
   version "2.6.2"
@@ -1999,10 +1643,6 @@ rimraf@~2.2.6:
 safe-buffer@^5.0.1, safe-buffer@~5.1.0, safe-buffer@~5.1.1:
   version "5.1.1"
   resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/safe-buffer/-/safe-buffer-5.1.1.tgz#893312af69b2123def71f57889001671eeb2c853"
-
-seed-random@^2.2.0:
-  version "2.2.0"
-  resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/seed-random/-/seed-random-2.2.0.tgz#2a9b19e250a817099231a5b99a4daf80b7fbed54"
 
 semver@^5.3.0:
   version "5.4.1"
@@ -2058,10 +1698,6 @@ sshpk@^1.7.0:
     jsbn "~0.1.0"
     tweetnacl "~0.14.0"
 
-string-hash@^1.1.3:
-  version "1.1.3"
-  resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/string-hash/-/string-hash-1.1.3.tgz#e8aafc0ac1855b4666929ed7dd1275df5d6c811b"
-
 string-width@^1.0.1, string-width@^1.0.2:
   version "1.0.2"
   resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/string-width/-/string-width-1.0.2.tgz#118bdf5b8cdc51a2a7e70d211e07e2b0b9b107d3"
@@ -2093,10 +1729,6 @@ strip-json-comments@~2.0.1:
 supports-color@^2.0.0:
   version "2.0.0"
   resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/supports-color/-/supports-color-2.0.0.tgz#535d045ce6b6363fa40117084629995e9df324c7"
-
-symbol-observable@^1.0.4:
-  version "1.0.4"
-  resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/symbol-observable/-/symbol-observable-1.0.4.tgz#29bf615d4aa7121bdd898b22d4b3f9bc4e2aa03d"
 
 tar-pack@^3.4.0:
   version "3.4.1"
@@ -2194,7 +1826,7 @@ verror@1.10.0:
 
 wcag-contrast@0.1.0:
   version "0.1.0"
-  resolved "https://registry.yarnpkg.com/wcag-contrast/-/wcag-contrast-0.1.0.tgz#6ae37954e404941718eda1a1d8e270d9b5671934"
+  resolved "https://artifactory.int.sofort.io:443/artifactory/api/npm/vNpm/wcag-contrast/-/wcag-contrast-0.1.0.tgz#6ae37954e404941718eda1a1d8e270d9b5671934"
   dependencies:
     hex-rgb "~1.0.0"
     relative-luminance "0.0.0"

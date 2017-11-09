@@ -10,21 +10,16 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "@klarna/bubble-ui": "^1.1.0",
-    "@klarna/higher-order-components": "^5.0.0",
+  "devDependencies": {
     "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.6.1",
-    "babel-preset-react": "^6.24.1",
+    "babel-preset-env": "^1.6.1"
+  },
+  "dependencies": {
     "get-contrast": "^2.0.0",
     "makethen": "^0.1.0",
     "pngjs": "^3.3.0",
     "prop-types": "^15.6.0",
     "puppeteer": "^0.12.0",
-    "ramda": "^0.25.0",
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0",
-    "react-motion": "^0.5.2",
     "temp": "^0.8.3"
   }
 }
